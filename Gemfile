@@ -1,6 +1,10 @@
 source 'https://rubygems.org'
 
-
+gem 'devise', '~> 3.5', '>= 3.5.6'
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
+gem 'simple_form', '~> 3.2', '>= 3.2.1'
+# Use mysql as the database for Active Record
+gem 'mysql2', '>= 0.3.13', '< 0.5'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
 # Use sqlite3 as the database for Active Record

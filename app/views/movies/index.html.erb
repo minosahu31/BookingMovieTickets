@@ -1,0 +1,7 @@
+<h1>Available movies list</h1>
+
+<% @movies.each do |movie| %>
+	<h2><%= movie.title %></h2>
+	<%= link_to "Available Theaters", theater_path(movie), class: "btn btn-default" %>
+<% end %>
+<%= link_to "New Movie", new_movie_path %>
