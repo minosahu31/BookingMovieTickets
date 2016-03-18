@@ -1,0 +1,4 @@
+<h2> Timings: </h2>
+<% @timings.each do |timee| %>
+	<h3><%= link_to timee.time , booking_path(timee), class: "btn btn-default" %></h3>
+<% end %>

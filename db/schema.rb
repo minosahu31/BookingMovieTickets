@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160318105203) do
+ActiveRecord::Schema.define(version: 20160318135300) do
+
+  create_table "available_seats", force: :cascade do |t|
+    t.string   "s_no",         limit: 255
+    t.boolean  "availability"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
 
   create_table "bookings", force: :cascade do |t|
     t.integer  "show_timings_id",  limit: 4
@@ -52,6 +59,13 @@ ActiveRecord::Schema.define(version: 20160318105203) do
     t.string   "director",   limit: 255
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+  end
+
+  create_table "seat_availability_times", force: :cascade do |t|
+    t.integer  "time_id",           limit: 4
+    t.integer  "seat_available_id", limit: 4
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
   create_table "theaters", force: :cascade do |t|

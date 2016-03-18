@@ -1,4 +1,4 @@
 <% @theaters.each do |theater| %>
 	<h2><%= theater.name %></h2>
-	<%= link_to "Book Ticket", booking_path, class: "btn btn-default" %>
+	<%= link_to "Book Ticket", bookings_path, class: "btn btn-default" %>
 <% end %>
