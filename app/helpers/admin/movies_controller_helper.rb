@@ -1,0 +1,2 @@
+module Admin::MoviesControllerHelper
+end

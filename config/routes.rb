@@ -7,4 +7,9 @@ Rails.application.routes.draw do
 
   get 'selected', to: 'bookings#selected', as: :selected
   get 'book_ticket', to: 'bookings#book_ticket', as: :book_ticket
+
+  namespace :admin do
+  	resources :movies
+  end
+  
 end

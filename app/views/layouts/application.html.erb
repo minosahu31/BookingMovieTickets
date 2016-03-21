@@ -22,7 +22,9 @@
 				<% end %>	
 			</ul>	
 			<% if customer_signed_in? %>
-				<p><%= link_to "New Movie", new_movie_path, class: "navbar-text navbar-link navbar-right" %></p>
+				<% if current_customer.role == "admin" %>
+					<p><%= link_to "New Movie", new_admin_movie_path, class: "navbar-text navbar-link navbar-right" %></p>
+				<% end %>	
 			<% end %>
 	</div>	
 </div>
