@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160318140954) do
+ActiveRecord::Schema.define(version: 20160321063659) do
 
   create_table "available_seats", force: :cascade do |t|
     t.string   "s_no",         limit: 255
@@ -63,7 +63,7 @@ ActiveRecord::Schema.define(version: 20160318140954) do
 
   create_table "seat_availability_times", force: :cascade do |t|
     t.integer  "timing_id",         limit: 4
-    t.integer  "seat_available_id", limit: 4
+    t.integer  "available_seat_id", limit: 4
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
   end

@@ -1,4 +1,11 @@
-<% @theaters.each do |theater| %>
-	<h2><%= theater.name %></h2>
-	<%= link_to "Book Ticket", bookings_path, class: "btn btn-default" %>
-<% end %>
+<div class="container">	
+	<h2 class="text-center title"><%= @movie.title %> Movie Available Theaters</h2>
+	<% @theaters.each do |theater| %>
+		<div class="col-md-4">
+			<div class="theaters">
+				<h2 class="theater-name"><%= theater.name %></h2>
+				<%= link_to "Book Ticket", bookings_path, class: "btn-custom" %>
+			</div>
+		</div>		
+	<% end %>
+</div>	

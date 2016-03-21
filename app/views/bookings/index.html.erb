@@ -1,4 +1,12 @@
-<h2> Timings: </h2>
-<% @timings.each do |timee| %>
-	<h3><%= link_to timee.time , booking_path(timee), class: "btn btn-default" %></h3>
-<% end %>
+<div class="container">
+	<h2 class="time-title"> Timings: </h2>
+	<div class="time-row">
+		<div class="col-md-offset-1">
+		<% @timings.each do |timee| %>
+			<div class="col-md-3 ">
+				<h3><%= link_to timee.time , booking_path(timee), class: "btn-time" %></h3>
+			</div>
+		<% end %>		
+	</div>
+	</div>			
+</div>	

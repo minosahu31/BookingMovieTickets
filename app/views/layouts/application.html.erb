@@ -21,8 +21,11 @@
 					<li><%= link_to "Log In", new_customer_session_path %></li>
 				<% end %>	
 			</ul>	
-		</div>	
+			<% if customer_signed_in? %>
+				<p><%= link_to "New Message", new_movie_path, class: "navbar-text navbar-link navbar-right" %></p>
+			<% end %>
 	</div>	
+</div>
 
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>

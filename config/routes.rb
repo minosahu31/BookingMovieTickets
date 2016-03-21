@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   resources :bookings
   root "movies#index"
 
+  get 'selected', to: 'bookings#selected', as: :selected
+  get 'book_ticket', to: 'bookings#book_ticket', as: :book_ticket
 end

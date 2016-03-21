@@ -1,7 +1,13 @@
-<h1>Available movies list</h1>
+<div class="container">
+		<h1 class="text-center title">Available Movies</h1>
 
-<% @movies.each do |movie| %>
-	<h2><%= movie.title %></h2>
-	<%= link_to "Available Theaters", theater_path(movie), class: "btn btn-default" %>
-<% end %>
-<%= link_to "New Movie", new_movie_path %>
+		<% @movies.each do |movie| %>
+			<div class="col-md-4">
+				<div class="movies">	
+					<h2 class="movies-title"><%= movie.title %></h2>
+					<%= link_to "Available Theaters", theater_path(movie), class: "btn-custom" %>
+				</div>	
+			</div>
+		<% end %>
+
+</div>	

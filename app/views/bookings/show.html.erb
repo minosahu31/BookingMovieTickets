@@ -1,5 +1,14 @@
-<h2>He haiii....</h2>
-
-
-
-<%= link_to "back", bookings_path, class: "btn btn-primary" %>
+<div class="container">	
+	<h2 class="title text-center">Available seats</h2>
+	<div class="seats">
+	<% @available_seats.each do |available_seat| %>
+		<div class="col-md-2">
+			<div class="btn-group" data-toggle="buttons">
+				<p class="btn btn-success"><input type="checkbox"><%= available_seat.s_no %></p>
+			</div>	
+		</div>	
+	<% end %>
+	<p><%= link_to "Book Now", book_ticket_path, class: "btn btn-primary btn-book " %></p>
+	</div><br/>
+	
+</div>	
