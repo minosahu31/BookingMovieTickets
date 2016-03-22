@@ -23,7 +23,7 @@
 			</ul>	
 			<% if customer_signed_in? %>
 				<% if current_customer.role == "admin" %>
-					<p><%= link_to "New Movie", new_admin_movie_path, class: "navbar-text navbar-link navbar-right" %></p>
+					<p><%= link_to "Delete Movie", admin_movies_controller_delete_path, class: "navbar-text navbar-link navbar-right" %><%= link_to "Add Movie", new_admin_movies_controller_path, class: "navbar-text navbar-link navbar-right " %></p>
 				<% end %>	
 			<% end %>
 	</div>	

@@ -1,0 +1,17 @@
+<div class="container">
+	<div class="col-md-8 col-md-offset-2">
+		<h1 class="text-center title">Movies</h1>
+		<% @movies.each do |movie| %>
+			<div class="col-md-4">	
+				<div class="movies">	
+					<div class="col-md-8">	
+						<h2 class="movies-title"><%= movie.title %></h2>
+					</div>
+					<div class="col-md-4">	
+						<%= link_to "Delete", admin_movies_controller_path(movie), method: :delete, data: { confirm: "Are you sure want to delete" }, class: "btn btn-custom1" %>
+					</div>	
+				</div>
+			</div>		
+		<%end%>
+	</div>
+</div>		

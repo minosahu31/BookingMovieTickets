@@ -1,16 +1,8 @@
 class Admin::MoviesControllerController < ApplicationController
 
-	before_action :require_admin
-
-
-	def require_admin
-		unless current_customer.role == "admin"	
-			redirect_to root_path
-		end
-	end	
-
 	def new
 		@movie = Movie.new 
+		@theaters = Theater.all
 	end
 
 	def create
@@ -21,6 +13,24 @@ class Admin::MoviesControllerController < ApplicationController
 			render "new"
 		end	
 	end
+
+	def delete
+		@movies = Movie.all
+	end
+
+	def destroy
+		@movie = Movie.find(params[:id])
+	end
+
+	private
+
+		def movie_params
+			params.require(:movie).permit(:title, :director)
+		end
+
+		def find_movie
+
+		end
 
 end
 

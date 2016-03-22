@@ -9,7 +9,8 @@ Rails.application.routes.draw do
   get 'book_ticket', to: 'bookings#book_ticket', as: :book_ticket
 
   namespace :admin do
-  	resources :movies
+    get 'movies_controller/delete'
+  	resources :movies_controller
   end
   
 end

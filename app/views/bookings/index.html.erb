@@ -1,10 +1,10 @@
 <div class="container">
-	<h2 class="time-title"> Timings: </h2>
-	<div class="time-row">
-		<div class="col-md-offset-1">
+	<div class="col-md-8 col-md-offset-2">
+	  <h2 class="time-title"> Timings: </h2>
+		<div class="time-row">
 		<% @timings.each do |timee| %>
 			<div class="col-md-3 ">
-				<h3><%= link_to timee.time , booking_path(timee), class: "btn-time" %></h3>
+				<h3><%= link_to timee.time , booking_path(timee), class: "btn-custom" %></h3>
 			</div>
 		<% end %>		
 	</div>
