@@ -28,6 +28,7 @@ class MoviesController < ApplicationController
 	end
 
 	def update
+		raise params.inspect
 	end
 
 	def destroy

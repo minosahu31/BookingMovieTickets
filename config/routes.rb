@@ -10,7 +10,10 @@ Rails.application.routes.draw do
 
   namespace :admin do
     get 'movies_controller/delete'
+    post 'movies_controller/update'
+    match "movie_update/:movie_id" => "movies_controller#update", via: :patch, as: :admin_movie_update
   	resources :movies_controller
   end
+
   
 end

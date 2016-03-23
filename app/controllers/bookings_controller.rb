@@ -2,6 +2,8 @@ class BookingsController < ApplicationController
 	before_action :authenticate_customer!
 	
 	def index
+		#raise params.inspect
+		#@theater = Theater.find(params[:id]) 
 		@timings = Timing.all 
 	end
 

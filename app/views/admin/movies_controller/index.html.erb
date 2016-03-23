@@ -1,0 +1,17 @@
+<div class="container">
+	<div class="col-md-8 col-md-offset-2">
+		<h1 class="text-center title">Select which Theater you want to update</h1>
+		<% @theaters.each do |theater| %>
+			<div class="col-md-4">	
+				<div class="theaters">	
+					<div class="col-md-8">	
+						<h2 class="theater-name"><%= theater.name %></h2>
+					</div>
+					<div class="col-md-4">	
+						<%= link_to "Update", admin_movies_controller_path(theater), class: "btn btn-custom1" %>
+					</div>	
+				</div>
+			</div>		
+		<%end%>
+	</div>
+</div>		

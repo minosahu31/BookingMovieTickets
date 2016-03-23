@@ -1,11 +1,11 @@
 <div class="container">
 	<div class="col-md-6 col-md-offset-3">	
-		<%= simple_form_for @movie, url: "/admin/movies_controller" do |f| %>
+		<%= simple_form_for @movie, url: "/admin/movie_update/#{@movie.id}" do |f| %>
 		  <%= f.error_notification %>
 			<%= f.input :title, label: "Movie Title",  autofocus: true   %>
 			<%= f.input :director%>
-			<%= f.association :theaters, collection: @theaters, input_html: { class: 'multiselectuser' },
-				:include_blank => false %>
+			<!-- f.association :theaters, collection: @theaters, input_html: { class: 'multiselectuser' },
+				:include_blank => false--> 
 			<%= f.button :submit %>
 		<% end %>
 	</div>	
